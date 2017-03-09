@@ -1,0 +1,17 @@
+/simulation/
+/incremental_db/
+/db/
+/Hamming.asm.rpt
+/Hamming.done
+/Hamming.eda.rpt
+/Hamming.fit.rpt
+/Hamming.flow.rpt
+/Hamming.map.rpt
+/Hamming.map.smsg
+/Hamming.tan.rpt
+/Hamming_nativelink_simulation.rpt
+/serv_req_info.txt
+*.qws
+*.v.bak
+/RqROMtemp_bb.v
+/tempROM.bsf
