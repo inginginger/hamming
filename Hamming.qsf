@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C10E144C8
-set_global_assignment -name TOP_LEVEL_ENTITY Hamming
+set_global_assignment -name TOP_LEVEL_ENTITY HammingDec
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:27:49  MARCH 09, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP1"
@@ -46,8 +46,8 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH HammingTb -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT simulation/modelsim/hamming_wave.do -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH DecTb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT simulation/modelsim/dec_wave.do -section_id eda_simulation
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 set_global_assignment -name CYCLONEII_OPTIMIZATION_TECHNIQUE SPEED
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0

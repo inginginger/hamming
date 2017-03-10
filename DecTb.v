@@ -50,6 +50,7 @@ module DecTb;
 
 
 reg [4:0] bitError;
+
 	initial begin
 		// Initialize Inputs
 		$display("Start simulation...");
@@ -66,24 +67,23 @@ reg [4:0] bitError;
 		#20
 		iValid = 0;
 		// Add stimulus here
-		#60
+		#70
 		iReady = 1;
 		#20
-		repeat(10) begin
+		
+		repeat(100) begin
 			bitError = ($random)%21;
 			iData[bitError] = ~iData[bitError];
 			iValid = 0;
 			iReady = 0;
-
 			#20
 			iValid = 1;
 			#20
 			iValid = 0;
-		
 			#60
 			iReady = 1;
 			#20
-			if(oData==16'h443d)
+			if(oData == 16'h443d)//check
 				$display ("Data decoded");
 			else
 				$display (oData,"Error");
@@ -99,7 +99,5 @@ reg [4:0] bitError;
 		clk = 0;
 		forever
 		#10 clk = ~clk;
-   end
-      
+    end
 endmodule
-

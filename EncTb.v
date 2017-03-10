@@ -35,17 +35,21 @@ module EncTb;
 		iReady = 0;
 
 		// Wait 100 ns for global reset to finish
-		repeat(10) begin
-			#100;
-			rst = 0;
-			#100
+		#100
+		rst = 0;
+		#10	
+		
+		repeat(20) begin
+		    iData = $random % 131072;
+			#1000;
 			iValid = 1;
 			#20
 			iValid = 0;
+			
 			// Add stimulus here
 			#100
 			iReady = 1;
-			#100
+			#20
 			iReady = 0;
 		end
 		#100
@@ -57,7 +61,7 @@ module EncTb;
 		clk = 0;
 		forever
 		#10 clk = ~clk;
-   end
-		  
+    end
+      
 endmodule
 
